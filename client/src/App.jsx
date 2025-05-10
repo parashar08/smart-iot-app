@@ -204,7 +204,7 @@ export default function App() {
           WebkitTextFillColor: 'transparent'
         }}
       >
-        Smart Garden Dashboard
+        Smart irrigation Dashboard
       </Typography>
 
       {/* Sensor Cards */}
