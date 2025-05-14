@@ -1,0 +1,9 @@
+.input-box input {
+    padding: 2px 0px;
+    font: 600;
+    font-size: 1rem;
+}
+
+.input-box {
+    margin: 8px 0px;
+}
