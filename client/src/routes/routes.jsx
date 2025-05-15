@@ -3,6 +3,7 @@ import App from "../App";
 import LandingPage from "../pages/LandingPage";
 import Home from "../pages/Home";
 import SignupOrLogin from '../pages/SignupOrLogin';
+import Dashboard from "../pages/Dashboard";
 
 const routes = createBrowserRouter([
     {
@@ -20,6 +21,10 @@ const routes = createBrowserRouter([
             {
                 path: 'home',
                 element: <Home />
+            },
+            {
+                path: 'dashboard',
+                element: <Dashboard />
             }
         ]
     }

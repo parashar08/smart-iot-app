@@ -18,7 +18,7 @@ const SignupOrLogin = () => {
             try {
                 await loginWithEmailAndPassword(email, password);
                 setMessage('Login successful');
-                navigate('/home');
+                navigate('/dashboard');
             } catch (error) {
                 setMessage('Login failed');
             }
@@ -26,7 +26,7 @@ const SignupOrLogin = () => {
             try {
                 await signupUserWithEmailAndPassword(email, password);
                 setMessage('Signup successful');
-                navigate('/home');
+                navigate('/dashboard');
             } catch (error) {
                 setMessage('Signup failed');
             }
@@ -38,7 +38,7 @@ const SignupOrLogin = () => {
 
     const handleGoogleSignIn = async () => {
         await signupWithGoogle();
-        navigate('/home');
+        navigate('/dashboard');
         setMessage(null);
     }
 
