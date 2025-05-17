@@ -1,7 +1,8 @@
 import { createContext, useContext } from "react";
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword ,GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword ,GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+import { getDatabase } from 'firebase/database'
 
 const FirebaseContext = createContext(null);
 
@@ -12,13 +13,15 @@ const firebaseConfig = {
   storageBucket: "smart-iot-app-e8912.firebasestorage.app",
   messagingSenderId: "997682192365",
   appId: "1:997682192365:web:8395369fbd451298f051e4",
-  measurementId: "G-JKFYFCJX6V"
+  measurementId: "G-JKFYFCJX6V",
+  databaseURL: 'https://smart-iot-app-e8912-default-rtdb.firebaseio.com'
 };
 
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const auth = getAuth();
 const googleProvider = new GoogleAuthProvider(app);
+const database = getDatabase(app);
 
 
 export const FirebaseProvider = ({ children }) => {
